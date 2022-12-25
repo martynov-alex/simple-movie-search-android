@@ -124,8 +124,8 @@ class MovieViewHolder(parent: ViewGroup) :
     fun bind(movie: Movie) {
         Glide.with(itemView.context)
             .load(movie.image)
-            .centerCrop()
-            .placeholder(androidx.constraintlayout.widget.R.drawable.abc_btn_borderless_material)
+            .placeholder(R.drawable.no_artwork)
+            .centerInside()
             .into(artwork)
 
         title.text = movie.title
