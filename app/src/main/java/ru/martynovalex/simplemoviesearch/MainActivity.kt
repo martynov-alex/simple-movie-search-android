@@ -20,7 +20,7 @@ import retrofit2.http.*
 
 class MainActivity : AppCompatActivity() {
     private val imdbBaseUrl = "https://imdb-api.com"
-    private val apiKey = "k_1gdzwf8s"
+    private val apiKey = "apiKey"
 
     // Инициализация Retrofit.
     private val retrofit = Retrofit.Builder()
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     private val imdbService = retrofit.create(IMDbApi::class.java)
 
     private val movies = ArrayList<Movie>()
-    private val adapter = MoviesAdapter();
+    private val adapter = MoviesAdapter()
 
     private lateinit var searchButton: Button
     private lateinit var queryInput: EditText
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         queryInput = findViewById(R.id.queryInput)
         moviesList = findViewById(R.id.movies)
 
-        adapter.movies = movies;
+        adapter.movies = movies
 
         moviesList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         moviesList.adapter = adapter
