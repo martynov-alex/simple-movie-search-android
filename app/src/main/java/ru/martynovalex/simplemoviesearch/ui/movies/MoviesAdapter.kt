@@ -1,7 +1,8 @@
-package ru.martynovalex.simplemoviesearch
+package ru.martynovalex.simplemoviesearch.ui.movies
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import ru.martynovalex.simplemoviesearch.domain.models.Movie
 
 class MoviesAdapter(private val clickListener: MovieClickListener) : RecyclerView.Adapter<MovieViewHolder>() {
 

@@ -1,4 +1,4 @@
-package ru.martynovalex.simplemoviesearch
+package ru.martynovalex.simplemoviesearch.ui.movies
 
 import android.app.Activity
 import android.content.Intent
@@ -19,6 +19,11 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import ru.martynovalex.simplemoviesearch.R
+import ru.martynovalex.simplemoviesearch.data.dto.MoviesSearchResponse
+import ru.martynovalex.simplemoviesearch.data.network.IMDbApiService
+import ru.martynovalex.simplemoviesearch.domain.models.Movie
+import ru.martynovalex.simplemoviesearch.ui.poster.PosterActivity
 
 class MoviesActivity : Activity() {
 

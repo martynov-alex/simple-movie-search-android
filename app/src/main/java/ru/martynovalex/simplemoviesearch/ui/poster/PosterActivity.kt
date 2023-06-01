@@ -1,9 +1,10 @@
-package ru.martynovalex.simplemoviesearch
+package ru.martynovalex.simplemoviesearch.ui.poster
 
 import android.app.Activity
 import android.os.Bundle
 import android.widget.ImageView
 import com.bumptech.glide.Glide
+import ru.martynovalex.simplemoviesearch.R
 
 class PosterActivity : Activity() {
 
