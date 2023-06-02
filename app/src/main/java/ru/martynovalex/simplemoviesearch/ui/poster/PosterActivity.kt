@@ -2,7 +2,7 @@ package ru.martynovalex.simplemoviesearch.ui.poster
 
 import android.app.Activity
 import android.os.Bundle
-import ru.martynovalex.simplemoviesearch.Creator
+import ru.martynovalex.simplemoviesearch.util.Creator
 import ru.martynovalex.simplemoviesearch.R
 
 class PosterActivity : Activity() {

@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import ru.martynovalex.simplemoviesearch.Creator
+import ru.martynovalex.simplemoviesearch.util.Creator
 import ru.martynovalex.simplemoviesearch.R
 import ru.martynovalex.simplemoviesearch.ui.poster.PosterActivity
 

@@ -1,6 +1,7 @@
-package ru.martynovalex.simplemoviesearch
+package ru.martynovalex.simplemoviesearch.util
 
 import android.app.Activity
+import android.content.Context
 import ru.martynovalex.simplemoviesearch.data.MoviesRepositoryImpl
 import ru.martynovalex.simplemoviesearch.data.network.RetrofitNetworkClient
 import ru.martynovalex.simplemoviesearch.domain.api.MoviesInteractor
@@ -11,12 +12,12 @@ import ru.martynovalex.simplemoviesearch.presentation.PosterController
 import ru.martynovalex.simplemoviesearch.ui.movies.MoviesAdapter
 
 object Creator {
-    private fun getMoviesRepository(): MoviesRepository {
-        return MoviesRepositoryImpl(RetrofitNetworkClient())
+    private fun getMoviesRepository(context: Context): MoviesRepository {
+        return MoviesRepositoryImpl(RetrofitNetworkClient(context))
     }
 
-    fun provideMoviesInteractor(): MoviesInteractor {
-        return MoviesInteractorImpl(getMoviesRepository())
+    fun provideMoviesInteractor(context: Context): MoviesInteractor {
+        return MoviesInteractorImpl(getMoviesRepository(context))
     }
 
     fun provideMoviesSearchController(activity: Activity, adapter: MoviesAdapter): MoviesSearchController {
